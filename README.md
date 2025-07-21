@@ -1,3 +1,3 @@
-# projeto-inicial-fetch-github-api
+# projeto-fetch-github-api
 Repositório o projeto de Fetch e GitHub API
 
