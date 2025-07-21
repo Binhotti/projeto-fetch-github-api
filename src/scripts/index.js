@@ -1,7 +1,6 @@
 import { getUser } from './services/user.js'
 import { getRepositories } from './services/repositories.js'
 
-
 import { user } from './objects/user.js'
 import { screen } from './objects/screen.js'
 
@@ -13,7 +12,8 @@ document.getElementById('btn-search').addEventListener('click', () => {
 
 document.getElementById('input-search').addEventListener('keyup', (e) => {
     const userName = e.target.value
-    const isEnterKeyPressed = e.key === 'Enter'
+    const key = e.which || e.keyCode
+    const isEnterKeyPressed = key === 13
 
     if (isEnterKeyPressed) {
         if (validateEmptyInput(userName)) return
@@ -45,6 +45,4 @@ async function getUserData(userName) {
     screen.renderUser(user)
 
 }
-
-window.getUserProfile = getUserData;
 
